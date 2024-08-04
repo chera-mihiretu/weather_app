@@ -1,0 +1,9 @@
+{
+  "cityName": "London",
+  "main": "Rain",
+  "description": "few clouds",
+  "iconCode": "02d",
+  "temperature": 35.63,
+  "pressure": 995,
+  "humidity": 96
+}
