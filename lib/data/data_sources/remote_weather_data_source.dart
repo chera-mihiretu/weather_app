@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_basics/core/constants/constants.dart';
 import 'package:flutter_basics/core/errors/exceptions/server_exception.dart';
 import 'package:flutter_basics/data/models/weather_model.dart';
@@ -17,6 +18,7 @@ class RemoteWeatherDataSourceImpl extends RemoteWeatherDataSource{
   Future<WeatherDataModel> getWeather() async  {
     final result = await client.get(Uri.parse(HttpInfo.weatherUtl));
     if (result.statusCode == 200) {
+      debugPrint(json.decode(result.body).toString());
       return WeatherDataModel.fromJson(json.decode(result.body));
     }else{
       throw ServerException();

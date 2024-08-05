@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics/presentation/bloc/weather_block.dart';
+import 'package:flutter_basics/presentation/bloc/weather_event.dart';
 import 'package:flutter_basics/presentation/bloc/weather_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -38,7 +39,9 @@ class WeatherPage extends StatelessWidget {
           ),
           Center(
             child: FilledButton(
-              onPressed: () {},
+              onPressed: () {
+                BlocProvider.of<WeatherBloc>(context).add(GetWeatherEvent());
+              },
               child: const Icon(Icons.refresh),
             ),
           ),

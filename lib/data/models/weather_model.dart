@@ -20,7 +20,7 @@ class WeatherDataModel extends WeatherEntity {
       iconCode: json['iconCode'],
       main: json['main'],
       pressure: json['pressure'],
-      temperature: json['temperature'],
+      temperature: double.parse(json['temperature']),
     );
   }
 
