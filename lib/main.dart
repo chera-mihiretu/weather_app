@@ -16,11 +16,6 @@ class _MyApp extends State<MyApp> {
 
   @override
   Widget build (BuildContext context) {
-    return MaterialApp(
-      routes: {
-        MainPage.route: (context) => MainPage(),
-      },
-      initialRoute: MainPage.route,
-    );
+    return const MaterialApp();
   }
 }
